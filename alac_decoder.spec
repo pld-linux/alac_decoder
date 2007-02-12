@@ -1,6 +1,6 @@
 # TODO: optflags
 Summary:	Apple Lossless Audio Decoder
-Summary(pl):	Dekoder Apple Lossless Audio
+Summary(pl.UTF-8):   Dekoder Apple Lossless Audio
 Name:		alac_decoder
 Version:	0.1.1
 Release:	0.1
@@ -14,7 +14,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Apple Lossless Audio Decoder.
 
-%description -l pl
+%description -l pl.UTF-8
 Dekoder Apple Lossless Audio.
 
 %prep
