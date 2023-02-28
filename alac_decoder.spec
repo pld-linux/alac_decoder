@@ -1,13 +1,17 @@
 Summary:	Apple Lossless Audio Decoder
 Summary(pl.UTF-8):	Dekoder Apple Lossless Audio
 Name:		alac_decoder
-Version:	0.1.1
-Release:	0.1
-License:	BSD-like
+Version:	0.2.0
+Release:	1
+License:	MIT
 Group:		Applications/Sound
-Source0:	http://craz.net/programs/itunes/files/%{name}-%{version}.tar.gz
-# Source0-md5:	06f358b8aa185dcb3d1e2d80f89570c3
-URL:		http://craz.net/programs/itunes/alac.html
+# original URL is dead
+#Source0:	http://craz.net/programs/itunes/files/%{name}-%{version}.tgz
+# ...so use gentoo distfiles
+Source0:	http://distfiles.gentoo.org/distfiles/%{name}-%{version}.tgz
+# Source0-md5:	cec75c35f010d36e7bed91935b57f2d1
+# NXDOMAIN
+#URL:		http://craz.net/programs/itunes/alac.html
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
