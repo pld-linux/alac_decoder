@@ -1,4 +1,3 @@
-# TODO: optflags
 Summary:	Apple Lossless Audio Decoder
 Summary(pl.UTF-8):	Dekoder Apple Lossless Audio
 Name:		alac_decoder
@@ -21,11 +20,14 @@ Dekoder Apple Lossless Audio.
 %setup -q -n %{name}
 
 %build
-%{__make}
+%{__make} \
+	CC="%{__cc}" \
+	CFLAGS="%{rpmcflags} %{rpmcppflags} -W -Wall"
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_bindir}
+
 install alac $RPM_BUILD_ROOT%{_bindir}
 
 %clean
@@ -33,4 +35,5 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc README
 %attr(755,root,root) %{_bindir}/alac
